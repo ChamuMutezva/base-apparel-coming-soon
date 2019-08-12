@@ -51,14 +51,14 @@ body {
         text-transform: uppercase;
     }
 
-    
+
 
     input[type="email"].invalid {
-         border: 1px solid red;
+        border: 1px solid red;
         background-image: url("images/icon-error.svg");
         background-repeat: no-repeat;
         background-position: 63% 25%;
-       
+
     }
 
     main {
@@ -81,7 +81,11 @@ body {
         margin: 0 5%;
         color: hsl(0, 6%, 24%);
     }
-    
+
+    input[type="email"]:focus {
+        height: 7vh;
+    }
+
     input[type="email"] {
         width: 80%;
         display: block;
@@ -207,10 +211,11 @@ body {
         letter-spacing: 18px;
         line-height: 1.2;
         font-size: xx-large;
-    }   
-     header img {
-         margin-top: 8%;
-         margin-left: 20%;
-     }
+    }
+
+    header img {
+        margin-top: 8%;
+        margin-left: 20%;
+    }
 
 }
