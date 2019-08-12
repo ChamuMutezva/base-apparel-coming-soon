@@ -1,48 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
- <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="images/logo.svg" />
-  </header>
-  <main class="styled">
-    <img src="images/hero-mobile.jpg"/>
-    <section class="comingSoon">
-    <h1><span>We're</span> coming soon</h1>
-    <p>
- Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-    </p>
-    <form method="POST" class="emailForm">
- <input type="email" placeholder="Email Address" class="styled" required/>
- <input type="submit" value="" />
-    </form>
-       
-    </section>
-  </main>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-  <script src="main.js"></script>
-</body>
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" />
+    </header>
+
+    <aside>
+      <!--<img src="images/hero-mobile.jpg" srcset="images/hero-mobile.jpg 1x,  images/hero-desktop 2x" />  -->
+      <picture>
+        <source srcset="images/hero-mobile.jpg" media="(min-width: 300px)" />
+        <source srcset="images/hero-desktop.jpg" media="(min-width: 960px)" />
+        <img srcset="images/hero-mobile.jpg" alt="Shop with me" />
+      </picture>
+    </aside>
+
+    <main class="styled">
+      <section class="comingSoon">
+        <h1><span>We're</span> coming soon</h1>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <form method="GET" class="emailForm">
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="styled"
+            required
+            autocomplete="email"
+          />
+          <input type="submit" value="" />
+          <label class="msg"></label>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Chamu Mutezva</a>.
+      </p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
 </html>

@@ -7,12 +7,29 @@
 body {
     font-family: "Josefin Sans", sans-serif;
     overflow-x: hidden;
+    display: grid;
 }
 
+
 @media only screen and (min-width: 300px) {
-    main img {
+    aside img {
         min-width: 100%;
         margin: auto;
+    }
+
+    aside {
+        background-color: hsl(7, 176%, 97%);
+        /* background: url("images/hero-mobile.jpg");*/
+        margin-top: 5%;
+    }
+
+    label.msg {
+        text-align: left;
+        display: block;
+        width: 58%;
+        margin: auto;
+        font-size: small;
+        color: red;
     }
 
     header img {
@@ -23,43 +40,58 @@ body {
     span {
         font-weight: 300;
         opacity: 0.4;
+        color: hsl(0, 36%, 70%);
     }
 
     h1 {
-         width: 45%;
-         text-align: center;
-         margin: 5% auto;
-         letter-spacing: 9px;
-         text-transform: uppercase;
+        width: 45%;
+        text-align: center;
+        margin: 10% auto;
+        letter-spacing: 9px;
+        text-transform: uppercase;
+    }
+
+    
+
+    input[type="email"].invalid {
+         border: 1px solid red;
+        background-image: url("images/icon-error.svg");
+        background-repeat: no-repeat;
+        background-position: 63% 25%;
+       
     }
 
     main {
-        /*background-color: hsl(0, 36%, 70%);*/
+        /*background-color: hsl(0, 36%, 70%);
+         margin-top: 10%;
+        */
         background-color: hsl(7, 176%, 97%);
-        margin-top: 10%
     }
 
     footer {
-        background-color: hsl(0, 36%, 70%);
+        margin: auto;
+        background-color: hsl(7, 176%, 97%);
     }
-    
+
     p {
         text-align: center;
         font-weight: 300;
         font-size: small;
+        line-height: 1.5em;
         margin: 0 5%;
+        color: hsl(0, 6%, 24%);
     }
-
+    
     input[type="email"] {
         width: 80%;
         display: block;
-        height: 8vh;
+        height: 7vh;
         margin: 5% auto;
         border-radius: 35px;
         border: none;
         padding-left: 5%;
-         background-color: hsl(7, 176%, 97%);
-       /* background-image: url("images/icon-arrow.svg"),
+        background-color: hsl(7, 176%, 97%);
+        /* background-image: url("images/icon-arrow.svg"),
         radial-gradient(hsl(0, 36%, 70%), hsl(0, 93%, 68%));
         background-size: 5%,  15% 100%;
         background-repeat: no-repeat;
@@ -69,32 +101,34 @@ body {
 
     input[type="submit"] {
         position: absolute;
-        height: 100%;
-        left: 74%;
-        top: 0%;
+        height: 9vh;
+        left: 75%;
+        top: -5%;
         width: 17%;
-        border-radius: 35%;
+        border-radius: 50%;
         background-image: url("images/icon-arrow.svg"),
-        radial-gradient(hsl(0, 36%, 70%), hsl(0, 93%, 68%));
+            radial-gradient(hsl(0, 36%, 70%), hsl(0, 93%, 68%));
         background-size: 25%,
-        100% 100%;
+            100% 100%;
         background-repeat: no-repeat;
         background-position: 70% center,
-        100%;
-    }   
-form.emailForm {
-    position: relative;
-}
-    section.comingSoon {
-        height: 60vh;
-
+            100%;
     }
 
-     .styled {
-         animation-timing-function: ease-in-out;
-         animation-name: headShake;
-         animation-duration: 1s;
-     }
+    form.emailForm {
+        position: relative;
+    }
+
+    section.comingSoon {
+        height: 60vh;
+        width: 100vw;
+    }
+
+    .styled {
+        animation-timing-function: ease-in-out;
+        animation-name: headShake;
+        animation-duration: 1s;
+    }
 
     @keyframes headShake {
         0% {
@@ -122,6 +156,61 @@ form.emailForm {
         }
     }
 
-   
+}
+
+
+@media only screen and (min-width: 960px) {
+    body {
+        background-image: url("images/bg-pattern-desktop.svg");
+        background-size: cover;
+    }
+
+    header {
+        width: 50vw;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    section.comingSoon {
+        width: 50vw;
+    }
+
+    aside {
+        width: 50vw;
+        grid-column: 2/3;
+        grid-row: 1/3;
+        background-color: transparent;
+    }
+
+    main {
+        width: 50vw;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        background-color: transparent;
+    }
+
+    aside img {
+        margin-top: 6%;
+        height: 95%;
+    }
+
+    p {
+        width: 55%;
+        margin: auto;
+        text-align: left;
+    }
+
+    h1 {
+        width: 40%;
+        text-align: left;
+        margin-left: 20%;
+        letter-spacing: 18px;
+        line-height: 1.2;
+        font-size: xx-large;
+    }   
+     header img {
+         margin-top: 8%;
+         margin-left: 20%;
+     }
 
 }
