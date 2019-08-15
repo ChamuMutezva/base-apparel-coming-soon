@@ -31,7 +31,7 @@
   </head>
   <body>
     <header>
-      <img src="images/logo.svg" />
+      <img src="images/logo.svg" alt="base apparell logo">
     </header>
 
     <aside>
@@ -61,6 +61,8 @@
         <form method="GET" class="emailForm">
           <input
             type="email"
+            aria-required="true"
+            aria-invalid="true"
             placeholder="Email Address"
             class="styled"
             required
