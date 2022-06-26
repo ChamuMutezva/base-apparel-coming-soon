@@ -30,9 +30,7 @@ observer = new IntersectionObserver((entries) => {
             entry.target.classList.remove('styled');
         }
     });
-    /*console.log('entry: ', entry);
-    console.log('observer: ', observer);
-    entry.target.classList.add('animate_me');*/
+   
 });
 
 headerFeature.forEach(heads => {
